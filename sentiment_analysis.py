@@ -17,4 +17,4 @@ processed_data['sentiment'] = processed_data['cleaned_Text'].apply(get_sentiment
 output_file_path = '/Users/vrie4/Downloads/analysed_compound_wikileaks_parsed.csv'
 processed_data.to_csv(output_file_path, index=False)
 
-print("sentiment analysis scores recorded"
+print("sentiment analysis scores recorded")
