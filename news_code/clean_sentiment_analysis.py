@@ -7,7 +7,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 
 # Load the dataset from the Excel file
-file_path = "/Users/phone_mon/Downloads/AY24:25 Semester 2/smu_datathon/dataset/news_excerpts_parsed.xlsx"  # Change this to your actual file path
+file_path = "C:/Users/Admin/smu_datathon-1/dataset/news_excerpts_parsed.xlsx"  # Change this to your actual file path
 df = pd.read_excel(file_path, sheet_name="Sheet1")
 
 # Initialize VADER sentiment analyzer
