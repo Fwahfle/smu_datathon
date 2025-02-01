@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('/Users/vrie4/Downloads/finalanalysed_wikileaks_parsed.csv')  #update to your csv file
+data = pd.read_csv('/finalanalysed_wikileaks_parsed.csv')  #update to your file path if needed
 
 text_col = data['cleaned_Text'] #get all text
 positive_text = data[data['sentiment_type'] =='positive']['cleaned_Text'] #get positive text
