@@ -4,7 +4,7 @@ import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 analyzer = SentimentIntensityAnalyzer() #initialise sentiment analyzer
-processed_data = pd.read_csv('/Users/vrie4/Downloads/nodate5clean_wikileaks_parsed.csv') #change to your cleaned data file
+processed_data = pd.read_csv('/Users/vrie4/Downloads/cleaned_wikileaks_parsed.csv') #change to your cleaned data file
 
 #create get_sentiment function
 def get_sentiment(text):
@@ -17,10 +17,10 @@ def get_sentiment(text):
         sentiment = "neutral"
     return score, sentiment
 
-#apply get_sentiment function
-processed_data['sentiment'] = processed_data['cleaned_Text'].apply(get_sentiment)
+#apply get_sentiment function & create the 2 new cols
+processed_data[['sentiment_score', 'sentiment_type']] = processed_data['cleaned_Text'].apply(lambda x: pd.Series(get_sentiment(x)))
 
-output_file_path = '/Users/vrie4/Downloads/analysed_compound_wikileaks_parsed.csv'
+output_file_path = '/Users/vrie4/Downloads/finalanalysed_wikileaks_parsed.csv'
 processed_data.to_csv(output_file_path, index=False)
 
 print("sentiment analysis scores recorded")

@@ -20,12 +20,12 @@ def clean_data(text):
 
     return cleaned_data
 
-input_file_path = "/Users/vrie4/Downloads/wikileaks_parsedcsv.csv" #load dataset (replace with your file path)
+input_file_path = '/Users/vrie4/Downloads/wikileaks_parsedcsv.csv' #load dataset (replace with your file path)
 data = pd.read_csv(input_file_path)
 
 data['cleaned_Text'] = data['Text'].apply(clean_data) #new col name
 
-output_file_path = '/Users/vrie4/Downloads/nodate5clean_wikileaks_parsed.csv'
+output_file_path = '/Users/vrie4/Downloads/cleaned_wikileaks_parsed.csv'
 data.to_csv(output_file_path, index=False)
 
 print("data processing done")
