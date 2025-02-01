@@ -1,0 +1,6 @@
+nltk~=3.8.1
+pandas~=2.1.0
+openpyxl~=3.1.5
+et_xmlfile~=2.0.0
+spacy~=3.8.4
+textblob~=0.19.0
