@@ -4,7 +4,7 @@ import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('/finalanalysed_wikileaks_parsed.csv')  #update to your file path if needed
+data = pd.read_csv('/dataset/finalanalysed_wikileaks_parsed.csv')  #update to your file path if needed
 
 text_col = data['cleaned_Text'] #get all text
 positive_text = data[data['sentiment_type'] =='positive']['cleaned_Text'] #get positive text
